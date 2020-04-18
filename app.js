@@ -21,8 +21,16 @@ listUl.addEventListener('click', (event) => {
       if (prevLi) {
         ul.insertBefore(li, prevLi);
       }
-    }                        
+    if (event.target.className == 'down') {
+      let li = event.target.parentNode;
+      let nextLi = li.nextElementSibling;
+      let ul = li.parentNode;
+      if (nextLi) {
+        ul.inserBefore(nextli, Li);
+      }  
+    }                       
   }
+}
 });
 
 toggleList.addEventListener('click', () => {
